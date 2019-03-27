@@ -1,0 +1,24 @@
+﻿@model List<FlashScoreScraper.Models.carAds>
+
+
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+    <table class="table-bordered" style="border: 3px;">
+        @foreach (var tmpAd in Model)
+        {
+            <tr style="border: 5px solid black;">
+                <th scope="col" style="padding: 10px">
+                    <a href="/Description/Index/@tmpAd.carLinkToDescription.Replace("?","XXX")"><h3>@tmpAd.carName</h3></a> <br />
+                    <p style="text-align: justify; font-weight: normal;">@tmpAd.carDescription </p>
+                    <b>Telephone number: @tmpAd.carSellerPhone</b>
+                </th>
+            </tr>
+        }
+    </table>
+    <a style="font-size: 2.4em" @{ var increment = Convert.ToInt32(ViewContext.RouteData.Values["id"]); if (Convert.ToInt32(ViewContext.RouteData.Values["id"]) >= 2) { increment -= 1; } } href="/Home/Index/@increment">Back</a>
+
+    <a style="font-size: 2.4em" @{ increment = Convert.ToInt32(ViewContext.RouteData.Values["id"]); if (Convert.ToInt32(ViewContext.RouteData.Values["id"]) >= 0) { increment += 1; } } href="/Home/Index/@increment">Next</a>
+</div>
+<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+
