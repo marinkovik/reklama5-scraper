@@ -58,8 +58,18 @@ And when we finish with getting info from one ad, we are putting all info to the
 ```
 return View(carAdss);
 ```
+There is method hideLastDigit for hidding the last 3 numbers of the telephone number because of security reasons
+```
+public string hideLastDigit(string telephoneNumber)
+        {
+            string newTelephoneNumber = telephoneNumber.Remove(telephoneNumber.Length - 3) + "XXX";
+            return newTelephoneNumber;
+        }
+```
+# USE THIS AT YOUR OWN RISK
+This website has policy for personal data protection. Read more about this on http://reklama5.mk/Help/HelpTerms
 
 # // To do
-Grab ads of only specific models of cars
-Grab ads of only on specific range of prices
+Grab ads of only specific models of cars  
+Grab ads of only on specific range of prices  
 Grab ads of only on specific Macedonian city
