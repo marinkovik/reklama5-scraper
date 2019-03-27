@@ -56,7 +56,7 @@ public string time { get; set; }
 And when we finish with getting info from one ad, we are putting all info to the list and go to the next ad. When all of this finish we are sending the data to the View.
 
 ```
-return View(carAdss);
+return View(carAds);
 ```
 There is method hideLastDigit for hidding the last 3 numbers of the telephone number because of security reasons
 ```
