@@ -66,6 +66,8 @@ public string hideLastDigit(string telephoneNumber)
             return newTelephoneNumber;
         }
 ```
+With click on every title link you are redirecting to the original reklama5 ad. You can override this on Description controller.
+
 # USE THIS AT YOUR OWN RISK
 This website has policy for personal data protection. Read more about this on http://reklama5.mk/Help/HelpTerms
 
